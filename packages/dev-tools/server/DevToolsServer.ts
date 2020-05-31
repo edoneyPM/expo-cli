@@ -50,7 +50,7 @@ export async function createAuthenticationContextAsync({ port }: { port: number 
 }
 
 export async function startAsync(projectDir: string): Promise<string> {
-  const port = await freeportAsync(19002, { hostnames: [null, 'localhost'] });
+  const port = await freeportAsync(8097, { hostnames: [null, 'localhost'] });
   const server = express();
 
   const authenticationContext = await createAuthenticationContextAsync({ port });
